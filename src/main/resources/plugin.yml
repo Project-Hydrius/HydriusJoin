@@ -1,0 +1,9 @@
+name: Join
+version: '${project.version}'
+main: net.hydrius.join.Join
+api-version: '1.13'
+authors: [flrp]
+description: Plugin that does stuff on join/leave for Hydrius Network
+website: flrp.dev, hydrius.net
+depend:
+  - PlaceholderAPI
