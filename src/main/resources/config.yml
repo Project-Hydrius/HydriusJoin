@@ -1,0 +1,60 @@
+# Action Types
+# [command] - Execute a command as player
+# [message] - Send a message
+# [effect] - Apply potion effects - EFFECT:AMPLIFIER:SECONDS
+# [broadcast] - Broadcast a message
+# [console] - Execute a command as console
+# [sound] - Play a sound - SOUND:VOLUME:PITCH
+# [title] - Send a title - TITLE:SUBTITLE:FADEIN:STAY:FADEOUT
+# [actionbar] - Send an actionbar
+
+formats:
+  default:
+    weight: 0
+    delay: 3
+    join-actions:
+      - '[broadcast] %player_name% &aWelcome to the server!'
+    leave-actions:
+      - '[broadcast] %player_name% &cGoodbye!'
+  example:
+    weight: 1
+    delay: 3
+    join-actions:
+      - '[broadcast] %player_name% &aWelcome to the server!'
+    leave-actions:
+      - '[broadcast] %player_name% &cGoodbye!'
+first-join:
+  enabled: true
+  actions:
+    - '[broadcast] %player_name% &aWelcome to the server! &7(&4#%server_unique_joins%&7)'
+motds:
+  default:
+    weight: 0
+    delay: 3
+    actions:
+    - '[broadcast] %player_name% &aWelcome to the server!'
+    - '[message] &aMessage of the day!'
+    - '[message] &aThis is a default message.'
+    - '[message] &aYou can edit this in config.yml'
+    - '[message] &aHave fun!'
+items:
+  settings:
+    clear-inventory: false
+    allow-dropping: false
+    allow-movement: false
+    override: true
+  entries:
+    server-selector:
+      name: '&c&lServer Selector'
+      lore:
+        - '&7Right click to open server selector'
+      material: COMPASS
+      amount: 1
+      slot: 0
+      actions:
+        right-click-actions:
+          - '[command] servers'
+          - '[message] %player_name% &aOpening server selector...'
+        left-click-actions:
+          - '[command] servers'
+          - '[message] %player_name% &aOpening server selector...'
