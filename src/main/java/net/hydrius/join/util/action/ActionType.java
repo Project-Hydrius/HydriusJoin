@@ -9,7 +9,6 @@ public enum ActionType {
     CONSOLE,
     SOUND,
     TITLE,
-    SUBTITLE,
     ACTIONBAR;
 
     public static ActionType getByName(String type) {

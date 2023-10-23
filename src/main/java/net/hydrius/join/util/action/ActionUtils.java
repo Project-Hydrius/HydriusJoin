@@ -45,9 +45,6 @@ public class ActionUtils {
                 case "title":
                     type = ActionType.TITLE;
                     break;
-                case "subtitle":
-                    type = ActionType.SUBTITLE;
-                    break;
                 case "actionbar":
                     type = ActionType.ACTIONBAR;
                     break;
