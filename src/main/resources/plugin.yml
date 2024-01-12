@@ -1,6 +1,6 @@
 name: Join
 version: '${project.version}'
-main: net.hydrius.join.Join
+main: net.hydrius.hydriusjoin.HydriusJoin
 api-version: '1.13'
 authors: [flrp]
 description: Plugin that does stuff on join/leave for Hydrius Network

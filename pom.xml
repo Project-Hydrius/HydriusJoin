@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.hydrius</groupId>
-    <artifactId>Join</artifactId>
+    <artifactId>HydriusJoin</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Join</name>
+    <name>HydriusJoin</name>
 
     <description>Plugin that does stuff on join/leave for Hydrius Network</description>
     <properties>

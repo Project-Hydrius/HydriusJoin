@@ -1,15 +1,12 @@
-package net.hydrius.join.util.action;
+package net.hydrius.hydriusjoin.util.action;
 
 import dev.flrp.espresso.util.StringUtils;
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
-import net.md_5.bungee.api.ChatMessageType;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
-import java.util.UUID;
 
 public class Action {
 
