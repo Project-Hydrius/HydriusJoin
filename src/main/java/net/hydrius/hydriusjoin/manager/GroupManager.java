@@ -1,9 +1,9 @@
-package net.hydrius.join.manager;
+package net.hydrius.hydriusjoin.manager;
 
-import net.hydrius.join.Join;
-import net.hydrius.join.util.group.FirstJoin;
-import net.hydrius.join.util.group.JoinGroup;
-import net.hydrius.join.util.group.MotdGroup;
+import net.hydrius.hydriusjoin.HydriusJoin;
+import net.hydrius.hydriusjoin.util.group.FirstJoin;
+import net.hydrius.hydriusjoin.util.group.JoinGroup;
+import net.hydrius.hydriusjoin.util.group.MotdGroup;
 import org.bukkit.Bukkit;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 
@@ -17,7 +17,7 @@ public class GroupManager {
     private final HashMap<String, JoinGroup> joinGroup = new HashMap<>();
     private final HashMap<String, MotdGroup> motdGroup = new HashMap<>();
 
-    public GroupManager(Join plugin) {
+    public GroupManager(HydriusJoin plugin) {
         firstJoin = new FirstJoin(plugin.getConfig().getConfigurationSection("first-join"));
         Set<String> joinGroupNames = plugin.getConfig().getConfigurationSection("formats").getKeys(false);
         joinGroupNames.forEach(groupName -> {

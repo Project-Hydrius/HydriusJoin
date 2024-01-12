@@ -1,7 +1,7 @@
-package net.hydrius.join.manager;
+package net.hydrius.hydriusjoin.manager;
 
-import net.hydrius.join.Join;
-import net.hydrius.join.util.group.ItemGroup;
+import net.hydrius.hydriusjoin.HydriusJoin;
+import net.hydrius.hydriusjoin.util.group.ItemGroup;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class ItemManager {
     private final List<Integer> slots = new ArrayList<>();
     private final HashMap<String, ItemGroup> itemGroups = new HashMap<>();
 
-    public ItemManager(Join plugin) {
+    public ItemManager(HydriusJoin plugin) {
         Set<String> itemGroupNames = plugin.getConfig().getConfigurationSection("items.entries").getKeys(false);
         itemGroupNames.forEach(groupName -> {
             ItemGroup group = new ItemGroup(groupName, plugin.getConfig().getConfigurationSection("items.entries." + groupName));

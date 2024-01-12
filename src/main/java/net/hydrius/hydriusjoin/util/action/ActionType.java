@@ -1,4 +1,4 @@
-package net.hydrius.join.util.action;
+package net.hydrius.hydriusjoin.util.action;
 
 public enum ActionType {
 

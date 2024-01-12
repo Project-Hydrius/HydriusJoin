@@ -1,4 +1,4 @@
-package net.hydrius.join.util.action;
+package net.hydrius.hydriusjoin.util.action;
 
 import java.util.ArrayList;
 import java.util.List;

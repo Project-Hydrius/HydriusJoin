@@ -1,12 +1,12 @@
-package net.hydrius.join;
+package net.hydrius.hydriusjoin;
 
 import dev.flrp.espresso.configuration.Configuration;
-import net.hydrius.join.listener.PlayerListener;
-import net.hydrius.join.manager.GroupManager;
-import net.hydrius.join.manager.ItemManager;
+import net.hydrius.hydriusjoin.listener.PlayerListener;
+import net.hydrius.hydriusjoin.manager.GroupManager;
+import net.hydrius.hydriusjoin.manager.ItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Join extends JavaPlugin {
+public final class HydriusJoin extends JavaPlugin {
 
     private GroupManager groupManager;
     private ItemManager itemManager;

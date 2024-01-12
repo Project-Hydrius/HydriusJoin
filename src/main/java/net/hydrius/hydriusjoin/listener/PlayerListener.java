@@ -1,9 +1,9 @@
-package net.hydrius.join.listener;
+package net.hydrius.hydriusjoin.listener;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import net.hydrius.join.Join;
-import net.hydrius.join.util.group.JoinGroup;
-import net.hydrius.join.util.group.MotdGroup;
+import net.hydrius.hydriusjoin.HydriusJoin;
+import net.hydrius.hydriusjoin.util.group.JoinGroup;
+import net.hydrius.hydriusjoin.util.group.MotdGroup;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,9 +22,9 @@ import org.bukkit.inventory.meta.SkullMeta;
 
 public class PlayerListener implements Listener {
 
-    private final Join plugin;
+    private final HydriusJoin plugin;
 
-    public PlayerListener(Join plugin) {
+    public PlayerListener(HydriusJoin plugin) {
         this.plugin = plugin;
     }
 
