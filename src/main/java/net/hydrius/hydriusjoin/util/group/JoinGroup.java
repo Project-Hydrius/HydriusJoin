@@ -1,11 +1,9 @@
-package net.hydrius.join.util.group;
+package net.hydrius.hydriusjoin.util.group;
 
-import net.hydrius.join.util.action.Action;
-import net.hydrius.join.util.action.ActionType;
-import net.hydrius.join.util.action.ActionUtils;
+import net.hydrius.hydriusjoin.util.action.Action;
+import net.hydrius.hydriusjoin.util.action.ActionUtils;
 import org.bukkit.configuration.ConfigurationSection;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class JoinGroup {

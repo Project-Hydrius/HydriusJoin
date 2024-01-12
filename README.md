@@ -9,4 +9,8 @@ Hydrius plugins are made specifically for the Hydrius Network,
 but some are free to use for anyone. If you wish to fork or modify this plugin,
 please read the license. Keep it open source!
 
+Permissions:
+- join.item
+- join.group
+- join.motd
 
