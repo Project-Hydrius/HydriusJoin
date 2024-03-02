@@ -31,6 +31,9 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+
+        event.joinMessage(null);
+
         // Clear inventory
         if(plugin.getConfig().getBoolean("items.settings.clear-inventory")) player.getInventory().clear();
 
@@ -74,6 +77,8 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
+
+        event.quitMessage(null);
 
         JoinGroup group = plugin.getGroupManager().getJoinGroup(player.getUniqueId());
         int delay = Math.max(group.getDelay(), 0);
