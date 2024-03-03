@@ -6,7 +6,7 @@
 
     <groupId>net.hydrius</groupId>
     <artifactId>HydriusJoin</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>HydriusJoin</name>
@@ -33,6 +33,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.4</version>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>dev.triumphteam</pattern>
+                            <shadedPattern>net.hydrius.util.cmds</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -67,6 +75,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>repo</id>
+            <url>https://repo.triumphteam.dev/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -86,6 +98,11 @@
             <artifactId>placeholderapi</artifactId>
             <version>2.11.4</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.triumphteam</groupId>
+            <artifactId>triumph-cmd-bukkit</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
