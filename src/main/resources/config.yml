@@ -7,7 +7,9 @@
 # [sound] - Play a sound - SOUND:VOLUME:PITCH
 # [title] - Send a title - TITLE:SUBTITLE:FADEIN:STAY:FADEOUT
 # [actionbar] - Send an actionbar
-
+settings:
+  spawn-on-join: true
+  fly-on-join: false
 formats:
   default:
     weight: 0
