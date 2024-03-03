@@ -46,8 +46,8 @@ public class GroupManager {
         String group = "default";
         int weight = 0;
         for(PermissionAttachmentInfo info : infoSet) {
-            if(!info.getPermission().startsWith("join.group.")) continue;
-            String g = info.getPermission().substring("join.group.".length());
+            if(!info.getPermission().startsWith("hydriusjoin.group.")) continue;
+            String g = info.getPermission().substring("hydriusjoin.group.".length());
             if(!joinGroup.containsKey(g)) continue;
             int w = joinGroup.get(g).getWeight();
             if(w < weight) continue;
@@ -70,8 +70,8 @@ public class GroupManager {
         String group = "default";
         int weight = 0;
         for(PermissionAttachmentInfo info : infoSet) {
-            if(!info.getPermission().startsWith("join.motd.")) continue;
-            String g = info.getPermission().substring("join.motd.".length());
+            if(!info.getPermission().startsWith("hydriusjoin.motd.")) continue;
+            String g = info.getPermission().substring("hydriusjoin.motd.".length());
             if(!motdGroup.containsKey(g)) continue;
             int w = motdGroup.get(g).getWeight();
             if(w < weight) continue;

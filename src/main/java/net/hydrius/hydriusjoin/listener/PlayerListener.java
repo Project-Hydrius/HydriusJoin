@@ -5,6 +5,7 @@ import net.hydrius.hydriusjoin.HydriusJoin;
 import net.hydrius.hydriusjoin.util.group.JoinGroup;
 import net.hydrius.hydriusjoin.util.group.MotdGroup;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -24,6 +25,7 @@ public class PlayerListener implements Listener {
 
     private final HydriusJoin plugin;
 
+
     public PlayerListener(HydriusJoin plugin) {
         this.plugin = plugin;
     }
@@ -33,6 +35,19 @@ public class PlayerListener implements Listener {
         Player player = event.getPlayer();
 
         event.joinMessage(null);
+
+        // Fly
+        if(plugin.getConfig().getBoolean("settings.fly-on-join") || player.hasPermission("hydriusjoin.fly")) player.setAllowFlight(true);
+
+        //Spawn
+        if(plugin.getConfig().getBoolean("settings.spawn-on-join") || player.hasPermission("hydriusjoin.spawn")) {
+            try {
+                Location spawn = plugin.getSpawnPoint();
+                if(spawn != null) player.teleport(spawn);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
         // Clear inventory
         if(plugin.getConfig().getBoolean("items.settings.clear-inventory")) player.getInventory().clear();
@@ -57,7 +72,7 @@ public class PlayerListener implements Listener {
 
         // Set items
         plugin.getItemManager().getItemGroups().forEach((name, group) -> {
-            if(!player.hasPermission("join.item." + name)) return;
+            if(!player.hasPermission("hydriusjoin.item." + name)) return;
             if(player.getInventory().getItem(group.getSlot()) != null && !plugin.getConfig().getBoolean("items.settings.override")) return;
 
             // check if the item is a player head and set the texture
